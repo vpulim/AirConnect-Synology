@@ -12,7 +12,7 @@ dist:
 
 target/package.tgz: target
 	$(if ${ARCH},,$(error Must specify ARCH))
-	curl -s -L https://github.com/philippe44/AirConnect/raw/${REPO_REVISION}/bin/aircast-${ARCH} -o target/aircast
+	curl -s -L https://github.com/codepeon/AirConnect/raw/${REPO_REVISION}/bin/aircast-${ARCH} -o target/aircast
 	chmod +x target/aircast
 	cd target && tar czf package.tgz aircast
 	rm target/aircast
