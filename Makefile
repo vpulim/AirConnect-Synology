@@ -12,10 +12,10 @@ dist:
 
 target/package.tgz: target
 	$(if ${ARCH},,$(error Must specify ARCH))
-	curl -s -L https://github.com/philippe44/AirConnect/raw/${REPO_REVISION}/bin/airupnp-${ARCH} -o target/airupnp
-	chmod +x target/airupnp
-	cd target && tar czf package.tgz airupnp
-	rm target/airupnp
+	curl -s -L https://github.com/philippe44/AirConnect/raw/${REPO_REVISION}/bin/aircast-${ARCH} -o target/aircast
+	chmod +x target/aircast
+	cd target && tar czf package.tgz aircast
+	rm target/aircast
 
 target/scripts: target
 	cp -a scripts target
